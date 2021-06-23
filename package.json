@@ -1,0 +1,24 @@
+{
+  "name": "apple_ceos_v2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "./node_modules/.bin/nodemon app.js",
+    "db:connect": "postgres://cksxxyio:zxMTRy31gQPw-qbFWWhVXbQWzEL8vz03@batyr.db.elephantsql.com/cksxxyio",
+    "db:init": "psql -f schema.sql postgres://cksxxyio:zxMTRy31gQPw-qbFWWhVXbQWzEL8vz03@batyr.db.elephantsql.com/cksxxyio",
+    "db:seed": "psql -f seed.sql postgres://cksxxyio:zxMTRy31gQPw-qbFWWhVXbQWzEL8vz03@batyr.db.elephantsql.com/cksxxyio",
+    "db:drop": "psql -f reset.sql postgres://cksxxyio:zxMTRy31gQPw-qbFWWhVXbQWzEL8vz03@batyr.db.elephantsql.com/cksxxyio",
+    "db:reset": "npm run db:drop; npm run db:init;",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-es6-template-engine": "^2.2.3",
+    "pg-promise": "^10.10.2"
+  }
+}
